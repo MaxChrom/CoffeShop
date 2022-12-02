@@ -20,3 +20,7 @@ Route::get('/', function () {
 Route::get('/menu', function () {
     return view('welcome');
 });
+
+Route::get('/coffee', function () {
+    return view('welcome');
+});
