@@ -11,19 +11,19 @@ function Navbar() {
             </nav>
             <nav className="header_menu">
                 <p className="header_menu-text">
-                    <Link to="/Home">Home</Link>
+                    <Link to="/home">Home</Link>
                 </p>
                 <p className="header_menu-text">
-                    <Link to="/Menu">Menu</Link>
+                    <Link to="/menu">Menu</Link>
                 </p>
                 <p className="header_menu-text">
-                    <Link to="/Coffee">Coffee</Link>
+                    <Link to="/shop">Shop</Link>
                 </p>
                 <p className="header_menu-text">
-                    <Link to="/Story">About Us</Link>
+                    <Link to="/story">About Us</Link>
                 </p>
                 <p className="header_menu-text">
-                    <Link to="/Cart"> 
+                    <Link to="/cart"> 
                         <img className='header_menu-text-cart' src={cart} alt="bag" />
                     </Link>
                 </p>
