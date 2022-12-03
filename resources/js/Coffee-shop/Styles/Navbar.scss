@@ -1,0 +1,53 @@
+$main-font: "Roboto Condensed", sans-serif;
+$color-dark: rgb(56, 56, 56);
+$color-light: rgb(250, 250, 250);
+
+.header {
+  background-color: rgb(246, 247, 249);
+  font-family: $main-font;
+  font-weight: 300;
+  display: flex;
+  flex-direction: row;
+  color: white;
+  justify-content: space-between;
+  align-items: center;
+  height: 10rem;
+  @media (max-width: 720px) {
+    flex-direction: column;
+    height: 100%;
+  }
+  &_logo {
+    & img {
+        height: 9rem;
+        margin-left: 2rem;
+    }
+  }
+  &_menu {
+    display: flex;
+    justify-content: space-between;
+    width: 50%;
+    align-items:center;
+
+    @media (max-width: 720px) {
+      justify-content: center;
+    }
+    @media (max-width: 380px) {
+      justify-content: center;
+      font-size: 0.8em;
+    }
+    margin-right: 10rem;
+    height: 65px;
+    text-transform: uppercase;
+    &-text {
+        font-size: 1.1rem;
+        & a:hover{
+            color:#6F4E37;
+            
+        }
+        &-cart{
+            max-width: 20px;
+        }
+    }
+    
+  }
+}
