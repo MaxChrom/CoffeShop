@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\CoffeeController;
+use App\Http\Controllers\ProductController;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 
@@ -24,4 +25,5 @@ Route::post('/product/store',[ProductController::class, 'showProduct']);
 //Route::post('/coffee/store',[CoffeeController::class, 'store']);
 
 Route::get('/coffees', [CoffeeController::class, 'showCoffee']);
+Route::get('/products',[ProductController::class, 'showProduct']);
 

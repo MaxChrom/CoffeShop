@@ -11,15 +11,15 @@ class CoffeeController extends Controller
     {
        $request->all();
        $data = $request;
-       $coffee = new Coffee; 
+       $coffee = new Coffee;
        $coffee->name = $data['coffee']['name'];
        $coffee->save();
     }
 
     public function showCoffee()
     {
-        
-        $allCoffee = Coffee::all();
+
+        $allCoffee = Coffee::with('menu')->get();
         return $allCoffee;
     }
 }
