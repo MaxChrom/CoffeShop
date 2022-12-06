@@ -2,7 +2,12 @@ import React from 'react'
 import MenuItemsComponent from '../Components/Menu/MenuItemsComponent'
 import coffeMachine from "../../../../public/Images/espresso-machine.jpg"
 import "../Styles/Menu.scss"
+import { useState, useEffect } from 'react'
 function Menu() {
+
+const [coffees, setCoffees] = useState(null)
+
+
   return (
     <main>
         <section>
