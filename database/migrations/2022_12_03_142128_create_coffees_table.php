@@ -16,7 +16,7 @@ return new class extends Migration
         Schema::create('coffees', function (Blueprint $table) {
             $table->id();
             $table->string('name');
-            $table->integer('price');
+            $table->float('price');
             $table->integer('menu_id')->nullable();
             $table->timestamps();
         });
