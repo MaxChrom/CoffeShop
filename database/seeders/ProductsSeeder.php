@@ -91,7 +91,7 @@ class ProductsSeeder extends Seeder
             ];
 
 
-        $product = new Product();
+        
 
         foreach ($coffees as $coffee) {
             $product = new Product();

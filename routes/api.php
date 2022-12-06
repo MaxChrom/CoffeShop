@@ -23,5 +23,5 @@ Route::post('/coffee/store',[CoffeeController::class, 'showCoffee']);
 Route::post('/product/store',[ProductController::class, 'showProduct']);
 //Route::post('/coffee/store',[CoffeeController::class, 'store']);
 
-// Route::get('/product', [CoffeeController::class, 'showCoffee']);
+Route::get('/coffees', [CoffeeController::class, 'showCoffee']);
 
