@@ -21,5 +21,5 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
 
 // Route::post('/coffee/store',[CoffeeController::class, 'store']);
 
-// Route::get('/product', [CoffeeController::class, 'showCoffee']);
+Route::get('/coffees', [CoffeeController::class, 'showCoffee']);
 

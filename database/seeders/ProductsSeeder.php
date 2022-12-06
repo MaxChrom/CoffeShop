@@ -91,17 +91,17 @@ class ProductsSeeder extends Seeder
             ];
 
 
-        $product = new Product();
+        
 
         foreach ($coffees as $coffee) {
-            
-            $product->name = $coffee->name;
-            $product->category_id = $coffee->category_id;
-            $product->flavor = $coffee->flavor;
-            $product->discription = $coffee->discription;
-            $product->manufacturer = $coffee->manufacturer;
-            $product->price = $coffee->price;
-            $product->quantity = $coffee->quantity;
+            $product = new Product();
+            $product->name = $coffee['name'];
+            $product->category_id = $coffee['category_id'];
+            $product->flavor = $coffee['flavor'];
+            $product->discription = $coffee['discription'];
+            $product->manufacturer = $coffee['manufacturer'];
+            $product->price = $coffee['price'];
+            $product->quantity = $coffee['quantity'];
             $product->save();
         }
 
