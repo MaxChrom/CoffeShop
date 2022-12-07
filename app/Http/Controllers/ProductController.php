@@ -19,7 +19,8 @@ class ProductController extends Controller
     public function showProduct()
     {
 
-        $allProduct = Product::all();
+        $allProduct = Product::with('category')->get();
         return $allProduct;
+//        return Product::all();
     }
 }

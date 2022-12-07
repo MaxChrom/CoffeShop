@@ -25,5 +25,9 @@ Route::post('/product/store',[ProductController::class, 'showProduct']);
 //Route::post('/coffee/store',[CoffeeController::class, 'store']);
 
 Route::get('/coffees', [CoffeeController::class, 'showCoffee']);
+<<<<<<< HEAD
 Route::get('/products', [ProductController::class, 'showProduct']);
+=======
+Route::get('/products',[ProductController::class, 'showProduct']);
+>>>>>>> master
 
