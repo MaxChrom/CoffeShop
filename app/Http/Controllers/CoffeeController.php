@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\Coffee;
+use App\Models\Menu;
 
 class CoffeeController extends Controller
 {
@@ -18,8 +19,8 @@ class CoffeeController extends Controller
 
     public function showCoffee()
     {
-        
-        $allCoffee = Coffee::all();
+        $allCoffee = Coffee::with('menu')->get();
+
         return $allCoffee;
     }
 }
