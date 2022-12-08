@@ -31,3 +31,7 @@ Route::get('/shop', function () {
 Route::get('/story', function () {
     return view('welcome');
 });
+
+Route::get('/cart', function () {
+    return view('welcome');
+});

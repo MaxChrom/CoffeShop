@@ -5,13 +5,14 @@ import '../Styles/Shop.scss'
 import Category from '../Components/Shop/Category';
 import ProductItem from '../Components/Shop/ProductItem';
 import CircularProgress from '@mui/material/CircularProgress';
-
+import { useCustomContexts } from "../Context/ContextsProvider";
 
 function Coffee() {
     const [categories, setCategories] = useState(null)
     const [products, setProducts] = useState(null)
-    console.log(products)
     const [activeIndex, setActiveIndex] = useState(-1);
+    const { inCart, setInCart } = useCustomContexts();
+
 
     const loadData = async() => {
         const responseCategories = await axios.get('/api/categories')
@@ -19,9 +20,15 @@ function Coffee() {
         const responseProducts = await axios.get('/api/products')
         setProducts(responseProducts.data)
     }
+
+    const addToCart = (item) => {
+        setInCart([...inCart, item])
+    }
+
     useEffect(() => {
         loadData()
     }, [])
+
 
 
     
@@ -47,7 +54,7 @@ function Coffee() {
                                         }).map((product, index) => {
                                         return( 
                                             <ProductItem name = {product.name} discription = {product.discription} flavor = {product.flavor} 
-                                            manufacturer = {product.manufacturer} price = {product.price}
+                                            manufacturer = {product.manufacturer} price = {product.price} addToCart ={addToCart}
                                             />          
                                         )
                                         })

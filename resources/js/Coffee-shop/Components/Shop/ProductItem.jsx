@@ -10,10 +10,10 @@ import { createTheme, ThemeProvider } from '@mui/material/styles';
 import { useState, useEffect } from 'react';
 import '../../Styles/ProductItem.scss'
 function ProductItem({
-    name, discription, flavor, manufacturer, price
+    name, discription, flavor, manufacturer, price, addToCart
 }) {
 
-    const [itemCount, setItemCount] = useState(1);
+    const [itemCount, setItemCount] = useState(0);
 
     const theme = createTheme({
         palette: {
@@ -33,13 +33,13 @@ function ProductItem({
                 <div className='item__container'>
                     <div className="item__container-info">
                         
-                        <div className='item__container-counter'>
                             <p>{name}</p>
                             <p>{discription}</p>
                             <p>{price}$</p> 
-                            <Button >More info</Button>
+                        <div className='item__container-counter'>
                            
-                            <Badge color="secondary" badgeContent={itemCount -1}>
+                           
+                            <Badge color="secondary" badgeContent={itemCount}>
                             <ShoppingCartIcon />{" "}
                             </Badge>
                             <ButtonGroup>
@@ -59,8 +59,13 @@ function ProductItem({
                                 {" "}
                                 <AddIcon fontSize="small" />
                             </Button>
+                            
+                             
                             </ButtonGroup>
                         </div>
+                         {itemCount >= 1 ? (
+                                <Button onClick={() => addToCart({name, discription, price, itemCount})}>Add to Cart</Button>
+                            ): "" }
                     </div>
                 </div>
             </div>

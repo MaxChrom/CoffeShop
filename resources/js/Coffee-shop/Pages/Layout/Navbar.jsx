@@ -1,9 +1,16 @@
-import React from 'react'
+import React, { useContext } from 'react'
 import logo from '../../../../../public/Images/logo.svg'
-import cart from '../../../../../public/Images/bag.png'
 import "../../Styles/Navbar.scss"
 import { Link } from 'react-router-dom'
+import ShoppingBagIcon from '@mui/icons-material/ShoppingBag';
+import ShoppingBasketIcon from '@mui/icons-material/ShoppingBasket';
+import Badge from "@mui/material/Badge";
+import { useCustomContexts } from "../../Context/ContextsProvider";
+import { useState, useEffect } from 'react'
 function Navbar() {
+    const { inCart, setInCart } = useCustomContexts();
+    const [showCart, setShowCart] = useState()
+    
   return (
    <nav className="header">
             <nav className="header_logo">
@@ -24,7 +31,13 @@ function Navbar() {
                 </p>
                 <p className="header_menu-text">
                     <Link to="/cart"> 
-                        <img className='header_menu-text-cart' src={cart} alt="bag" />
+                        {
+                        // inCart.length > 0 ? 
+                            <Badge color="secondary" badgeContent={inCart.length}>
+                            <ShoppingBasketIcon />{" "}
+                            </Badge> 
+                            // : ""
+                           }
                     </Link>
                 </p>
             </nav>

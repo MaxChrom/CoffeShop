@@ -8,6 +8,7 @@ import { LanguageContext } from "./LanguageContext";
 import { ContentContext } from "./ContentContext";
 import { UserContext } from "./UserContext";
 import { contents } from "../Content/contents";
+import { CartContext } from "./CartContext";
 
 /**
  * create custom hook which will provide all contexts
@@ -21,6 +22,7 @@ export function useCustomContexts() {
         ...useContext(LanguageContext),
         ...useContext(ContentContext),
         ...useContext(UserContext),
+        ...useContext(CartContext)
     };
 }
 /**
@@ -79,28 +81,33 @@ export default function ContextsProvider({ children }) {
         }
     };
 
+    
+    // cartContext - default values 
+    const [inCart, setInCart] = useState([])
+
     /**
      * pass all contexts values and functions in individual providers
      *  so they can be used in all children
      */
     return (
-        // <UserDataContext>
-        <UserContext.Provider
-            value={{
-                user,
-                setUser,
-                loadingUser,
-                setLoadingUser,
-                userData,
-                changeUserData,
-            }}>
+        // <UserContext.Provider
+        //     value={{
+        //         user,
+        //         setUser,
+        //         loadingUser,
+        //         setLoadingUser,
+        //         userData,
+        //         changeUserData,
+        //     }}>
             <ContentContext.Provider value={{ content }}>
                 <LanguageContext.Provider value={{ changeLang }}>
                     <ThemeContext.Provider value={{ theme, changeTheme }}>
+                        <CartContext.Provider value= {{inCart, setInCart }}>
                         {children}
+                        </CartContext.Provider>
                     </ThemeContext.Provider>
                 </LanguageContext.Provider>
             </ContentContext.Provider>
-        </UserContext.Provider>
+        // </UserContext.Provider>
     );
 }
