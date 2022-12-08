@@ -1,3 +1,6 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap');
+
+
 $main-font: "Roboto Condensed", sans-serif;
 $color-dark: rgb(56, 56, 56);
 $color-light: rgb(250, 250, 250);
@@ -7,14 +10,13 @@ $color-light: rgb(250, 250, 250);
   margin: 0;
 }
 a {
-  text-decoration: none;
-  color: rgb(148, 149, 150);
+   text-decoration: none;
 }
 
 
 ///1 page main content ///
 
-.main {
+.main { 
   display: flex;
   flex-direction: column;
   margin: auto;
@@ -23,6 +25,7 @@ a {
   // background-color:lightgray;
   font-family: $main-font;
 
+ 
   &_title {
     text-align: left;
     margin-bottom: 3%;

@@ -88,6 +88,91 @@ class ProductsSeeder extends Seeder
                     'price' => 23,
                     'quantity' => 150
                 ],
+
+                [
+                    'name' => 'Grinder',
+                    'category_id' => 2,
+                    'flavor' => null,
+                    'discription' => 'The best grinder for your coffee',
+                    'manufacturer' => 'USA',
+                    'price' => 150,
+                    'quantity' => 150
+                ],
+                [
+                    'name' => 'Grinder',
+                    'category_id' => 2,
+                    'flavor' => null,
+                    'discription' => 'The best grinder for your coffee',
+                    'manufacturer' => 'USA',
+                    'price' => 150,
+                    'quantity' => 150
+                ],
+                [
+                    'name' => 'Grinder',
+                    'category_id' => 2,
+                    'flavor' => null,
+                    'discription' => 'The best grinder for your coffee',
+                    'manufacturer' => 'USA',
+                    'price' => 150,
+                    'quantity' => 150
+                ],
+                [
+                    'name' => 'Grinder',
+                    'category_id' => 2,
+                    'flavor' => null,
+                    'discription' => 'The best grinder for your coffee',
+                    'manufacturer' => 'USA',
+                    'price' => 150,
+                    'quantity' => 150
+                ],
+                [
+                    'name' => 'Grinder',
+                    'category_id' => 2,
+                    'flavor' => null,
+                    'discription' => 'The best grinder for your coffee',
+                    'manufacturer' => 'USA',
+                    'price' => 150,
+                    'quantity' => 150
+                ],
+                [
+                    'name' => 'Coffe Cup',
+                    'category_id' => 3,
+                    'flavor' => null,
+                    'discription' => 'This cup for coffee lovers only',
+                    'manufacturer' => 'RUSSIA',
+                    'price' => 15,
+                    'quantity' => 150
+                ],
+                [
+                    'name' => 'Coffe Cup',
+                    'category_id' => 3,
+                    'flavor' => null,
+                    'discription' => 'This cup for coffee lovers only',
+                    'manufacturer' => 'RUSSIA',
+                    'price' => 15,
+                    'quantity' => 150
+                ],
+                [
+                    'name' => 'Coffe Cup',
+                    'category_id' => 3,
+                    'flavor' => null,
+                    'discription' => 'This cup for coffee lovers only',
+                    'manufacturer' => 'RUSSIA',
+                    'price' => 15,
+                    'quantity' => 150
+                ],
+                [
+                    'name' => 'Coffe Cup',
+                    'category_id' => 3,
+                    'flavor' => null,
+                    'discription' => 'This cup for coffee lovers only',
+                    'manufacturer' => 'RUSSIA',
+                    'price' => 15,
+                    'quantity' => 150
+                ],
+
+
+                
             ];
 
 

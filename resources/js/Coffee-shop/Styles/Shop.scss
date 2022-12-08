@@ -1,0 +1,55 @@
+
+.shop{
+    &__category{
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 1rem;
+        margin-bottom: 1rem;
+
+        & button{ 
+            border: 0;
+        }
+        & button:hover{
+            box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
+        }
+        .Coffee{
+            background-image: url('../../../../public/Images/coffeeCategory.png');
+        }
+
+        .Accessories{
+            background-image: url('../../../../public/Images/coffeeAccessories.png');
+            
+            
+        }
+        .Merch{
+            background-image: url('../../../../public/Images/CoffeeMerch.png');
+            
+        }
+
+        .Coffee,
+        .Accessories,
+        .Merch {
+            height: 10rem;
+            display: flex;
+            justify-content: center;
+            align-items:center;
+            & p {
+                font-size: 5rem;
+                text-transform: uppercase;
+                color:antiquewhite;
+            }
+        }
+        &-item{
+            margin: 2rem 0;
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            gap: 2rem;
+
+           
+        }
+    }
+}
+
+.loader {
+    margin: 0 auto;
+}

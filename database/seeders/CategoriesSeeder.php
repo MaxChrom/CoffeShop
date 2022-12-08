@@ -15,7 +15,7 @@ class CategoriesSeeder extends Seeder
      */
     public function run()
     {
-        $categories = ['Coffee', 'Accessories'];
+        $categories = ['Coffee', 'Accessories', 'Merch'];
 
 
         foreach ($categories as $category_name)

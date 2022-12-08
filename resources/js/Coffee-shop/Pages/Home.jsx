@@ -1,7 +1,6 @@
 import React from 'react'
 import { useEffect, useState } from 'react'
 import "../Styles/Home.scss"
-import Coffee from './Coffee'
 import counter from "../../../../public/Images/counter.jpg"
 
 function Home() {

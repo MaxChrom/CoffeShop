@@ -16,6 +16,11 @@ $color-light: rgb(250, 250, 250);
     flex-direction: column;
     height: 100%;
   }
+
+  & a {
+  color: rgb(148, 149, 150);
+  }
+  
   &_logo {
     & img {
         height: 9rem;

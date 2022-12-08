@@ -19,13 +19,8 @@ class CoffeeController extends Controller
 
     public function showCoffee()
     {
-<<<<<<< HEAD
-        $allCoffee = Coffee::with('menu')->get();
-
-=======
 
         $allCoffee = Coffee::with('menu')->get();
->>>>>>> master
         return $allCoffee;
     }
 }

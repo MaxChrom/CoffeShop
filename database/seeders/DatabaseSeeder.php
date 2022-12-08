@@ -20,6 +20,7 @@ class DatabaseSeeder extends Seeder
             CoffeesSeeder::class,
             MenusSeeder::class,
             ProductsSeeder::class,
+            CategoriesSeeder::class
         ]);
         // \App\Models\User::factory(10)->create();
 

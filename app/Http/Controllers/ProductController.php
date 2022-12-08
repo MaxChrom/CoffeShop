@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Category;
 use App\Models\Product;
 use Illuminate\Http\Request;
 
@@ -22,5 +23,11 @@ class ProductController extends Controller
         $allProduct = Product::with('category')->get();
         return $allProduct;
 //        return Product::all();
+    }
+
+    public function showCategories()
+    {
+        $allCaregories = Category::all();
+        return $allCaregories;
     }
 }
